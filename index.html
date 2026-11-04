@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1117">
+  <meta name="description" content="Official Terms & Conditions for GCU-SHOPS by Game Corner Universe Limited.">
+  <title>Terms & Conditions | GCU-SHOPS</title>
+
+  <!-- Modern Tech Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #ff2a44;
+      --primary-glow: rgba(255, 42, 68, 0.35);
+      --primary-dark: #cc1028;
+      
+      --bg: #090b10;
+      --bg-gradient: radial-gradient(circle at 10% 10%, rgba(255, 42, 68, 0.08) 0%, transparent 45%),
+                    radial-gradient(circle at 90% 80%, rgba(255, 107, 107, 0.06) 0%, transparent 50%),
+                    #0a0d14;
+
+      --glass-surface: rgba(255, 255, 255, 0.035);
+      --glass-surface-hover: rgba(255, 255, 255, 0.06);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-border-focus: rgba(255, 42, 68, 0.45);
+      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+
+      --text-main: #f0f3f8;
+      --text-muted: #8b96a5;
+      --text-dim: #555f6d;
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Custom Glass Scrollbar */
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+    /* Reading Progress Bar */
+    .progress-bar-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      z-index: 100;
+      background: transparent;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), #ff737d);
+      box-shadow: 0 0 12px var(--primary);
+    }
+
+    /* Glass Container Utilities */
+    .glass-card {
+      background: var(--glass-surface);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-specular), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      border-radius: var(--radius-lg);
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Site Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(9, 11, 16, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .nav-wrap {
+      max-width: 1320px;
+      margin: auto;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255, 42, 68, 0.2), rgba(255, 42, 68, 0.05));
+      border: 1px solid rgba(255, 42, 68, 0.35);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: -0.5px;
+      box-shadow: 0 0 20px rgba(255, 42, 68, 0.2);
+    }
+    .brand-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+    }
+    .brand-name span { color: var(--primary); }
+    .brand-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--glass-border);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-main);
+      backdrop-filter: blur(10px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--glass-specular);
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+    .btn.primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 6px 20px var(--primary-glow);
+    }
+    .btn.primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+    .menu-btn {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      background: var(--glass-surface);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px 28px 90px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 46px 48px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 320px;
+      height: 320px;
+      background: var(--primary-glow);
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill {
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      background: rgba(255, 42, 68, 0.12);
+      border: 1px solid rgba(255, 42, 68, 0.28);
+      color: #ff6e80;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pill.neutral {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--glass-border);
+      color: var(--text-muted);
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -1.4px;
+      margin: 22px 0 14px;
+      font-weight: 700;
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+    }
+    .hero p {
+      max-width: 840px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+    .hero a { color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); }
+    .hero a:hover { color: #ff6e80; }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      border-top: 1px solid var(--glass-border);
+      margin-top: 30px;
+      padding-top: 22px;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-meta strong { color: #fff; }
+
+    /* Quick Grid */
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+    .quick-card {
+      padding: 24px;
+    }
+    .quick-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .quick-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255, 42, 68, 0.1);
+      border: 1px solid rgba(255, 42, 68, 0.2);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .quick-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .quick-card p {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* Main Two-Column Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Sticky Sidebar & TOC */
+    .sidebar-sticky {
+      position: sticky;
+      top: 96px;
+    }
+    .toc-card {
+      padding: 22px;
+    }
+    .toc-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .toc-head h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      color: #fff;
+    }
+    .count {
+      font-size: 11px;
+      color: var(--primary);
+      background: rgba(255, 42, 68, 0.1);
+      border: 1px solid rgba(255, 42, 68, 0.25);
+      border-radius: 99px;
+      padding: 3px 9px;
+      font-weight: 700;
+    }
+    .search-wrapper { position: relative; margin-bottom: 14px; }
+    .search {
+      width: 100%;
+      border: 1px solid var(--glass-border);
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px 10px 36px;
+      outline: none;
+      font-size: 12.5px;
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+    .search:focus {
+      border-color: var(--glass-border-focus);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+    .toc-list {
+      max-height: calc(100vh - 310px);
+      overflow-y: auto;
+      padding-right: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .toc-list a {
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 12px;
+      text-decoration: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc-list a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(3px);
+    }
+    .toc-list a.active {
+      background: rgba(255, 42, 68, 0.15);
+      color: #ff6e80;
+      border-left: 2px solid var(--primary);
+      font-weight: 600;
+    }
+
+    /* Policy Content Sections */
+    .policy-sections-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .policy-section {
+      padding: 30px 34px;
+      scroll-margin-top: 105px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .number {
+      width: 36px;
+      height: 36px;
+      flex: none;
+      border-radius: 10px;
+      background: rgba(255, 42, 68, 0.08);
+      border: 1px solid rgba(255, 42, 68, 0.25);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .section-title h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      color: #fff;
+      letter-spacing: -0.4px;
+    }
+    .policy-section p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 10px 0;
+      line-height: 1.8;
+    }
+    .policy-section p strong { color: #f0f3f8; }
+    .policy-section a {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--primary);
+    }
+    .policy-section a:hover { color: #ff737d; }
+    .policy-section ul {
+      padding-left: 22px;
+      margin: 14px 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .policy-section li { margin: 8px 0; }
+    .note {
+      border-left: 3px solid var(--primary);
+      background: rgba(255, 42, 68, 0.06);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 18px;
+      color: #e4e7ec;
+      font-size: 13px;
+      margin-top: 16px;
+    }
+
+    /* Accordion FAQ */
+    .faq-card, .contact-card {
+      padding: 34px;
+      margin-top: 30px;
+    }
+    .block-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    details {
+      border-bottom: 1px solid var(--glass-border);
+      padding: 16px 0;
+      transition: background 0.2s ease;
+    }
+    details:last-of-type { border-bottom: none; }
+    summary {
+      cursor: pointer;
+      font-size: 14.5px;
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #e4e7ec;
+      transition: color 0.2s;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { color: var(--primary); }
+    summary::after {
+      content: '+';
+      color: var(--primary);
+      font-size: 20px;
+      font-weight: 400;
+      transition: transform 0.25s ease;
+    }
+    details[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    details p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-top: 12px;
+      line-height: 1.7;
+    }
+
+    /* Support Desk Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .contact-grid p {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin: 4px 0;
+    }
+    .contact-grid strong { color: #fff; }
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--glass-border);
+      background: rgba(6, 8, 12, 0.8);
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 12px;
+      line-height: 1.8;
+      backdrop-filter: blur(20px);
+    }
+    footer strong { color: #c4ccd8; }
+
+    /* Float Top Button */
+    #toTop {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      background: rgba(255, 42, 68, 0.9);
+      color: #fff;
+      font-size: 18px;
+      box-shadow: 0 10px 24px var(--primary-glow);
+      display: none;
+      place-items: center;
+      cursor: pointer;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s ease;
+    }
+    #toTop:hover { transform: translateY(-3px) scale(1.05); }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .sidebar-sticky { position: relative; top: 0; }
+      .toc-list { max-height: 220px; display: grid; grid-template-columns: 1fr 1fr; }
+      .quick-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 14px;
+        right: 14px;
+        background: rgba(14, 17, 24, 0.96);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .menu-btn { display: grid; place-items: center; }
+      
+      .hero { padding: 30px 22px; }
+      .toc-list { grid-template-columns: 1fr; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .policy-section { padding: 22px 20px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-actions { justify-content: flex-start; }
+    }
+
+    @media print {
+      body { background: #fff!important; color: #000!important; }
+      .progress-bar-container, .site-header, .sidebar-sticky, .quick-grid, #faq, #contact, #toTop, .nav-actions { display: none!important; }
+      .main-grid { display: block; }
+      .policy-section, .hero { border: 1px solid #ccc!important; box-shadow: none!important; color: #000!important; page-break-inside: avoid; }
+      .number { border: 1px solid #000; color: #000; }
+      h1, h2, strong { color: #000!important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Live Reading Scroll Indicator -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="GCU-SHOPS home">
+        <div class="brand-mark">GCU</div>
+        <div>
+          <div class="brand-name">GCU<span>-SHOPS</span></div>
+          <div class="brand-sub">Game Corner Universe Ltd.</div>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="https://gcushops.kesug.com" target="_blank" rel="noopener">Store Home</a>
+        <a href="#key-points">Key Highlights</a>
+        <a href="#contents">Clauses Index</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Support</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn" onclick="window.print()" title="Print Terms"><span>▣</span> Print</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Banner Card -->
+    <section class="glass-card hero">
+      <div class="hero-top">
+        <div class="pills">
+          <span class="pill"><span style="display:inline-block;width:6px;height:6px;background:var(--primary);border-radius:50%"></span> Active Policy • 2026</span>
+          <span class="pill neutral">Jurisdiction: Bangladesh</span>
+        </div>
+      </div>
+      <h1>Official Terms &amp; Conditions</h1>
+      <p>Welcome to <strong>GCU-SHOPS</strong>, an online retail service powered and maintained by <strong>Game Corner Universe Limited</strong>. These terms set out the rights, obligations, and guidelines governing your interaction with our official website at <a href="https://gcushops.kesug.com" target="_blank" rel="noopener">gcushops.kesug.com</a>.</p>
+      <div class="hero-meta">
+        <span>Corporate Entity: <strong>Game Corner Universe Limited</strong></span>
+        <span>Customer Helpline: <strong><a href="https://wa.me/8801913196903">01913196903 (WhatsApp)</a></strong></span>
+        <span>Primary Currency: <strong>Bangladeshi Taka (BDT ৳)</strong></span>
+      </div>
+    </section>
+
+    <!-- Quick Takeaways Grid -->
+    <section class="quick-grid" id="key-points" aria-label="Key Highlights">
+      <div class="glass-card quick-card">
+        <div class="quick-icon">✓</div>
+        <h3>Fair &amp; Legal Use</h3>
+        <p>Customers must use GCU-SHOPS lawfully, maintaining verified account credentials and respectful interactions.</p>
+      </div>
+      <div class="glass-card quick-card">
+        <div class="quick-icon">▣</div>
+        <h3>Transparent Catalog</h3>
+        <p>We detail product descriptions, stock metrics, and campaign rules to ensure complete customer awareness.</p>
+      </div>
+      <div class="glass-card quick-card">
+        <div class="quick-icon">৳</div>
+        <h3>BDT Currency Standard</h3>
+        <p>All catalog prices are calculated and processed in Bangladeshi Taka (৳) with standard invoicing protocols.</p>
+      </div>
+      <div class="glass-card quick-card">
+        <div class="quick-icon">◎</div>
+        <h3>Direct Assistance</h3>
+        <p>Our dedicated support team is available via official WhatsApp channels for prompt dispute resolution.</p>
+      </div>
+    </section>
+
+    <!-- Two-Column Interactive Layout -->
+    <div class="main-grid" id="contents">
+      <!-- Sticky Sidebar -->
+      <aside class="sidebar-sticky">
+        <div class="glass-card toc-card">
+          <div class="toc-head">
+            <h2>Index of Clauses</h2>
+            <span class="count" id="sectionCount">29 Sections</span>
+          </div>
+          <div class="search-wrapper">
+            <span class="search-icon">⌕</span>
+            <input class="search" id="sectionSearch" type="search" placeholder="Filter terms clause..." aria-label="Search sections">
+          </div>
+          <nav class="toc-list" id="tocList">
+            <a href="#s1">01. Introduction</a><a href="#s2">02. Acceptance of Terms</a><a href="#s3">03. Website Usage</a>
+            <a href="#s4">04. User Eligibility</a><a href="#s5">05. Account Registration</a><a href="#s6">06. Account Security</a>
+            <a href="#s7">07. User Responsibilities</a><a href="#s8">08. Accurate Information</a><a href="#s9">09. Product Descriptions</a>
+            <a href="#s10">10. Product Pricing</a><a href="#s11">11. Product Availability</a><a href="#s12">12. Order Confirmation</a>
+            <a href="#s13">13. Payment Terms</a><a href="#s14">14. Promotional Offers</a><a href="#s15">15. Mystery Box Terms</a>
+            <a href="#s16">16. Gift Box Offers</a><a href="#s17">17. Prohibited Activities</a><a href="#s18">18. Fraudulent Activities</a>
+            <a href="#s19">19. Intellectual Property</a><a href="#s20">20. Content &amp; Branding</a><a href="#s21">21. Third-Party Links</a>
+            <a href="#s22">22. Maintenance &amp; Uptime</a><a href="#s23">23. Account Termination</a><a href="#s24">24. Limitation of Liability</a>
+            <a href="#s25">25. Changes to Services</a><a href="#s26">26. Privacy Policy Link</a><a href="#s27">27. Bangladesh Jurisdiction</a>
+            <a href="#s28">28. Revisions to Terms</a><a href="#s29">29. Support &amp; Contacts</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Clauses List -->
+      <div class="policy-sections-wrap">
+        <section class="glass-card policy-section" id="s1">
+          <div class="section-title"><span class="number">01</span><h2>Introduction</h2></div>
+          <p>Welcome to GCU-SHOPS, an online shopping platform operated by Game Corner Universe Limited. These Terms &amp; Conditions govern access to and use of our website, its pages, features and services.</p>
+          <p>In these terms, "we", "us" and "our" refer to GCU-SHOPS and "you" or "customer" refers to any person who visits or uses the website.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s2">
+          <div class="section-title"><span class="number">02</span><h2>Acceptance of Terms</h2></div>
+          <p>By accessing, browsing, creating an account or placing an order through GCU-SHOPS, you acknowledge that you have read and understood these Terms &amp; Conditions. If you do not agree with them, please do not use the website.</p>
+          <p>Where required by law, your statutory consumer rights remain unaffected by these terms.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s3">
+          <div class="section-title"><span class="number">03</span><h2>Website Usage</h2></div>
+          <p>You may use this website only for lawful shopping-related purposes. You agree not to interfere with the website, attempt unauthorized access, disrupt its operation or use its content in a misleading or unlawful way.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s4">
+          <div class="section-title"><span class="number">04</span><h2>User Eligibility</h2></div>
+          <p>You must be legally capable of entering into a purchase transaction under applicable law. If you are under the age at which you may independently make purchases, you should use the website only with the involvement and permission of a parent or legal guardian.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s5">
+          <div class="section-title"><span class="number">05</span><h2>User Account Registration</h2></div>
+          <p>Some website features may require an account. When registering, you agree to provide information that is accurate and current and to update it when it changes. We may request reasonable information needed to verify or manage an account.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s6">
+          <div class="section-title"><span class="number">06</span><h2>Account Security</h2></div>
+          <p>You are responsible for keeping your login credentials confidential and for activity carried out through your account, except where applicable law provides otherwise. Notify us promptly if you suspect unauthorized access or misuse of your account.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s7">
+          <div class="section-title"><span class="number">07</span><h2>User Responsibilities</h2></div>
+          <p>You agree to use GCU-SHOPS respectfully, follow these terms, provide truthful information and avoid actions that may harm other customers, our business, website systems or service providers.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s8">
+          <div class="section-title"><span class="number">08</span><h2>Accurate Information</h2></div>
+          <p>You are responsible for ensuring that information submitted through the website is complete and correct. This includes your name, contact details and any other information requested for the feature or transaction you choose to use.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s9">
+          <div class="section-title"><span class="number">09</span><h2>Product Information &amp; Descriptions</h2></div>
+          <p>We aim to display product descriptions, images and specifications as clearly as possible. Images are provided for product identification and presentation; actual appearance, packaging or minor details may vary where reasonably disclosed. Please review the listing details before making a purchase.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s10">
+          <div class="section-title"><span class="number">10</span><h2>Product Pricing</h2></div>
+          <p>Prices displayed on GCU-SHOPS are generally stated in Bangladeshi Taka (BDT ৳), unless a listing says otherwise. Applicable charges, if any, should be shown or communicated before you confirm an order. We may correct genuine listing or typographical errors in accordance with applicable law.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s11">
+          <div class="section-title"><span class="number">11</span><h2>Product Availability</h2></div>
+          <p>Products and offers are subject to availability. A product shown on the website may become unavailable or its listing may be updated. We will communicate material availability issues relating to an order through the contact details provided, where reasonably possible.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s12">
+          <div class="section-title"><span class="number">12</span><h2>Orders &amp; Order Confirmation</h2></div>
+          <p>Submitting an order request does not by itself guarantee acceptance. An order is subject to review and confirmation by GCU-SHOPS. We may contact you to verify order details or clarify information before confirming the transaction.</p>
+          <p>Any order-related cancellation, return, refund, replacement or delivery matters are governed by the separate policy pages published by GCU-SHOPS and applicable law; they are not set out in this Terms &amp; Conditions page.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s13">
+          <div class="section-title"><span class="number">13</span><h2>Payment Terms</h2></div>
+          <p>Available payment methods and payment instructions will be shown during the purchase process or communicated by our authorized support channels. You agree to use a valid payment method and provide accurate payment-related information when required.</p>
+          <div class="note"><strong>Security Notice:</strong> Never transmit passwords, PINs, one-time passwords (OTPs), or raw payment-card CVV codes to anyone claiming to represent GCU-SHOPS.</div>
+        </section>
+
+        <section class="glass-card policy-section" id="s14">
+          <div class="section-title"><span class="number">14</span><h2>Promotional Offers &amp; Discounts</h2></div>
+          <p>Promotions, discount codes and special offers may have specific eligibility requirements, validity periods, quantity limits or other conditions. The applicable conditions will be displayed with the relevant offer. Offers may not be combined unless expressly stated.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s15">
+          <div class="section-title"><span class="number">15</span><h2>Misty Box / Mystery Box Terms</h2></div>
+          <p>Where a Misty Box or mystery-box offer is available, its price, purchase conditions and any description of possible contents must be reviewed before ordering. The exact contents may be undisclosed by the nature of the offer, but the offer must not be understood as a guarantee of a particular item, cash value or prize unless that guarantee is clearly stated in the offer description.</p>
+          <p>Any quantity limits, eligibility conditions or offer-specific restrictions will be stated on the relevant offer page. Customers should rely on the published offer details rather than unofficial messages or assumptions.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s16">
+          <div class="section-title"><span class="number">16</span><h2>Gift Box Offers</h2></div>
+          <p>Gift box promotions are subject to the description and conditions displayed for the particular campaign. Included items, presentation, price and availability may differ between offers. Any special condition should be disclosed on the offer page before purchase.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s17">
+          <div class="section-title"><span class="number">17</span><h2>Prohibited Activities</h2></div>
+          <p>You must not use the website to:</p>
+          <ul>
+            <li>Break any applicable law or infringe another person’s rights.</li>
+            <li>Upload malicious code, attempt to disrupt the website or probe its security without permission.</li>
+            <li>Submit false, misleading or impersonated information.</li>
+            <li>Copy, scrape, resell or commercially exploit website content without written permission.</li>
+            <li>Abuse promotions, accounts, support channels or other users.</li>
+          </ul>
+        </section>
+
+        <section class="glass-card policy-section" id="s18">
+          <div class="section-title"><span class="number">18</span><h2>Fraudulent Activities</h2></div>
+          <p>Fraud, payment manipulation, identity misuse, fake orders, unauthorized account access and deliberate abuse of promotional offers are prohibited. We may review suspicious activity and take proportionate steps permitted by law, including restricting relevant website features or referring suspected unlawful conduct to appropriate authorities.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s19">
+          <div class="section-title"><span class="number">19</span><h2>Intellectual Property Rights</h2></div>
+          <p>Unless otherwise stated, the GCU-SHOPS name, logos, visual identity, website design, text and original materials are owned by or used with permission by Game Corner Universe Limited. You may not reproduce, modify, distribute or commercially use these materials without prior written authorization, except as permitted by law.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s20">
+          <div class="section-title"><span class="number">20</span><h2>Website Content &amp; Branding</h2></div>
+          <p>Product names, trademarks, logos and images belonging to third parties remain the property of their respective owners. Their appearance on the website does not necessarily mean that those owners endorse or are affiliated with GCU-SHOPS.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s21">
+          <div class="section-title"><span class="number">21</span><h2>Third-Party Links</h2></div>
+          <p>Our website may contain links to external websites or services for convenience. We do not control all third-party content or practices and are not responsible for their independent terms or privacy practices. Review the relevant third party’s information before using its service.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s22">
+          <div class="section-title"><span class="number">22</span><h2>Website Availability &amp; Maintenance</h2></div>
+          <p>We aim to keep GCU-SHOPS accessible, but uninterrupted availability cannot be guaranteed. Access may occasionally be limited for maintenance, updates, technical issues, security reasons or circumstances beyond our reasonable control.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s23">
+          <div class="section-title"><span class="number">23</span><h2>Account Suspension &amp; Termination</h2></div>
+          <p>Where reasonably necessary and permitted by law, we may restrict or suspend access to an account or website feature if we have grounds to believe that these terms have been seriously breached, the account is being misused or security is at risk. We will consider the circumstances and applicable legal requirements.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s24">
+          <div class="section-title"><span class="number">24</span><h2>Limitation of Liability</h2></div>
+          <p>Nothing in these terms excludes or limits liability that cannot legally be excluded or limited under applicable law. Subject to that rule, GCU-SHOPS is not responsible for losses caused by a user’s unlawful conduct, inaccurate information supplied by the user, or third-party services outside our reasonable control.</p>
+          <div class="note">These terms do not remove or reduce any mandatory statutory consumer rights available under the laws of Bangladesh.</div>
+        </section>
+
+        <section class="glass-card policy-section" id="s25">
+          <div class="section-title"><span class="number">25</span><h2>Changes to Website Services</h2></div>
+          <p>We may add, update or modify website features, product listings or service functions to improve the store or respond to operational requirements. Changes will not override rights that customers have under applicable law.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s26">
+          <div class="section-title"><span class="number">26</span><h2>Privacy Policy Reference</h2></div>
+          <p>Your use of GCU-SHOPS is also subject to our separate Privacy Policy, which explains how personal information is handled. Please read it alongside these Terms &amp; Conditions on our official portal: <a href="https://gcushops.kesug.com" target="_blank" rel="noopener">GCU-SHOPS website</a>.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s27">
+          <div class="section-title"><span class="number">27</span><h2>Applicable Laws of Bangladesh</h2></div>
+          <p>These terms are intended to operate in accordance with the applicable laws of Bangladesh. Any matter arising from use of the website will be addressed under the relevant legal framework and by the competent authorities or courts where applicable.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s28">
+          <div class="section-title"><span class="number">28</span><h2>Changes to These Terms</h2></div>
+          <p>We may revise these Terms &amp; Conditions when our services, operations or legal requirements change. The updated version will be published on this page with a revised “Last Updated” date. Continued use of the website after an update means you acknowledge the updated terms, to the extent permitted by law.</p>
+        </section>
+
+        <section class="glass-card policy-section" id="s29">
+          <div class="section-title"><span class="number">29</span><h2>Contact Information</h2></div>
+          <p>If you have questions about these Terms &amp; Conditions, communicate with our official support team through the contact details listed below.</p>
+          <p><strong>Entity:</strong> Game Corner Universe Limited<br>
+          <strong>Domain:</strong> <a href="https://gcushops.kesug.com" target="_blank" rel="noopener">gcushops.kesug.com</a><br>
+          <strong>Email:</strong> <a href="mailto:gamecorneruniverse@gmail.com">gamecorneruniverse@gmail.com</a><br>
+          <strong>WhatsApp Support:</strong> <a href="https://wa.me/8801913196903">01913196903</a></p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Interactive FAQ Accordion -->
+    <section class="glass-card faq-card" id="faq">
+      <h2 class="block-heading">Frequently Asked Questions</h2>
+      <details>
+        <summary>When do these Terms &amp; Conditions apply?</summary>
+        <p>They take effect as soon as you access or use GCU-SHOPS, register a user profile, or initiate an order via the portal.</p>
+      </details>
+      <details>
+        <summary>Can product prices or offers change dynamically?</summary>
+        <p>Yes. Catalog prices, stock status, and promotional deals are subject to updates. Relevant conditions displayed on an active listing govern each order.</p>
+      </details>
+      <details>
+        <summary>Are Misty / Mystery Box rewards explicitly guaranteed?</summary>
+        <p>Only when a specific deliverable or value is stated in the campaign description. Otherwise, mystery products conform strictly to the dynamic possibilities published on the offer page.</p>
+      </details>
+      <details>
+        <summary>Where can I read delivery, returns, and refund guidelines?</summary>
+        <p>Return, refund, cancellation, logistics, and warranty policies are hosted on their respective dedicated pages, keeping our base Terms simple and legally distinct.</p>
+      </details>
+      <details>
+        <summary>How can I connect with customer care?</summary>
+        <p>Reach us anytime via email at <strong>gamecorneruniverse@gmail.com</strong> or directly message our official WhatsApp Helpdesk at <strong>01913196903</strong>.</p>
+      </details>
+    </section>
+
+    <!-- Support Desk Contact Card -->
+    <section class="glass-card contact-card" id="contact">
+      <div class="contact-grid">
+        <div>
+          <h2 class="block-heading" style="margin-bottom:8px">GCU Support Concierge</h2>
+          <p><strong>Game Corner Universe Limited</strong></p>
+          <p>Direct Web: gcushops.kesug.com</p>
+          <p>Email: gamecorneruniverse@gmail.com</p>
+          <p>Official WhatsApp: 01913196903</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="https://wa.me/8801913196903" target="_blank" rel="noopener">WhatsApp Support ↗</a>
+          <a class="btn" href="mailto:gamecorneruniverse@gmail.com">Send Email ↗</a>
+          <a class="btn" href="https://gcushops.kesug.com" target="_blank" rel="noopener">Storefront ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>GCU-SHOPS</strong> &bull; Game Corner Universe Limited<br>
+    Official Terms &amp; Conditions &bull; Last Revised: 04 November 2026<br>
+    &copy; 2026 Game Corner Universe Limited. All rights reserved.
+  </footer>
+
+  <button id="toTop" aria-label="Back to top">↑</button>
+
+  <script>
+    // Live Reading Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+      
+      // Toggle toTop button
+      const topBtn = document.getElementById('toTop');
+      topBtn.style.display = winScroll > 450 ? 'grid' : 'none';
+    }, { passive: true });
+
+    document.getElementById('toTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile Navigation Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.textContent = '☰';
+    }));
+
+    // Real-time Sidebar Section Search Filter
+    const search = document.getElementById('sectionSearch');
+    const tocLinks = [...document.querySelectorAll('#tocList a')];
+    search.addEventListener('input', () => {
+      const term = search.value.trim().toLowerCase();
+      tocLinks.forEach(link => {
+        const matches = link.textContent.toLowerCase().includes(term);
+        link.style.display = matches ? 'flex' : 'none';
+      });
+    });
+
+    // Active Link Scroll Spy with IntersectionObserver
+    const sections = document.querySelectorAll('.policy-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            const isTarget = link.getAttribute('href') === '#' + entry.target.id;
+            link.classList.toggle('active', isTarget);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -65% 0px' });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
